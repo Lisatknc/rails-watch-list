@@ -1,0 +1,39 @@
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  color:white;
+}
+.card-category{
+  text-align: center;
+  line-height: 200px;
+  position: relative;
+  background-color: rgb(46, 69, 129);
+  height:200px;
+  border-radius: 8px;
+}
+.cards a{
+  width:100%;
+  height:200px;
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+  text-decoration: none;
+  color:white;
+}
+// p a img{ filter:grayscale(100%); }画像を白黒にする
+
+.card a:hover{
+	filter:grayscale(0);
+	transition:0.3s;
+}
+
+a{
+  display: block;
+  width:120px;
+  height: 40px;
+  text-align: center;
+  color:rgb(26, 24, 23)
+}
