@@ -2,6 +2,7 @@
 <div class= "mx-4">
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Create a list", class: "btn btn-warning text-white" %>
   <% end %>
 </div>
