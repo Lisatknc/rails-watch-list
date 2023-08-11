@@ -1,11 +1,11 @@
 <div class="container">
-    <h1>Movies</h1>
-  <div class="card">
-    <p><%= @list.name %></p>
-  <% @bookmarks.each do |bookmark|%>
-  <p><%= bookmark.movie.title%></p>
-  <img src ="<%= bookmark.movie.poster_url %>">
-  <% end %>
-  </div>
-</div>
+    <h1><%= @list.name %></h1>
+    <div class="card">
+      <% @bookmarks.each do |bookmark|%>
+      <img src ="<%= bookmark.movie.poster_url %>">
+      <p><%= bookmark.movie.title%></p>
+      <% end %>
+    </div>
 <%= link_to "Add movie",  new_list_bookmark_path(@list) %>
+  <%= link_to "Back", lists_path%>
+</div>

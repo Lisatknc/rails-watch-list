@@ -3,10 +3,13 @@
 </div>
 <div class="container">
   <div class="cards">
-      <% @lists.each do |list|%>
-    <div class="card-category" >
-         <%= link_to list.name, list_path(list)%>
-    </div>
+    <% @lists.each do |list|%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
+        <%= link_to list_path(list), class: "delete", data: { turbo_method: :delete, turbo_confirm: "Are yousure?"} do %>
+          <i class="fa-solid fa-circle-xmark"></i>
+        <% end%>
+          <%= link_to list.name, list_path(list), class: "link"%>
+        </div>
       <% end %>
   </div>
   <%= link_to "Create a list", new_list_path %>

@@ -1,19 +1,28 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   color:white;
+  margin:0 auto;
 }
 .card-category{
   text-align: center;
   line-height: 200px;
   position: relative;
-  background-color: rgb(46, 69, 129);
+  background-color: rgb(237, 237, 237);
   height:200px;
   border-radius: 8px;
+  box-shadow: 3px 3px 3px #deddd9;
+  filter:grayscale(100%);
 }
-.cards a{
+.card-category img{
+  height:200px;
+  width:100%;
+  object-fit: fill;
+}
+
+.card-category .link{
   width:100%;
   height:200px;
   display: block;
@@ -23,11 +32,11 @@
   text-decoration: none;
   color:white;
 }
-// p a img{ filter:grayscale(100%); }画像を白黒にする
 
-.card a:hover{
-	filter:grayscale(0);
+.card-category:hover{
+	filter:grayscale(0%);
 	transition:0.3s;
+  color:rgb(26, 24, 23);
 }
 
 a{
@@ -36,4 +45,11 @@ a{
   height: 40px;
   text-align: center;
   color:rgb(26, 24, 23)
+}
+
+.delete i{
+  position: absolute;
+  top:-7px;
+  right:-7px;
+  z-index:1;
 }

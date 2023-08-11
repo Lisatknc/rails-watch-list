@@ -1,7 +1,13 @@
-.container{
-  img{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+.card{
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  // align-items: center;
 }
+
+.card img{
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
 }
